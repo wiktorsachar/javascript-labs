@@ -16,9 +16,9 @@ let outerObject = (function(value){
             }
         })(),
         reverseValue: (function(){
-            if (value && (typeof value) == 'number') {
+            if (value && typeof value == 'number') {
                 return value*(-1);
-            } else if (value && (typeof value) == 'string' && Number(value) != 'NaN') { //tutaj musialem cos popsuc, HALP!
+            } else if (value && typeof value == 'string' && !isNaN(Number(value))) {
                 return (Number(value))*(-1);
             } else {
                 return 'The value cannot be converted into number.';
@@ -26,13 +26,6 @@ let outerObject = (function(value){
         })()
     };
     return obiekcik;
-})('somestring');
+})();
 
 console.log(outerObject)
-
-
-
-
-
-
-
