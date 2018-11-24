@@ -20,6 +20,10 @@ let outerObject = (function(value){
                 return value*(-1);
             } else if (value && typeof value == 'string' && !isNaN(Number(value))) {
                 return (Number(value))*(-1);
+            } else if (value && typeof value == 'string' && isNaN(Number(value))){
+                let splitString = value.split('');
+                let reverseArray = splitString.reverse();
+                return reverseArray.join('');
             } else {
                 return 'The value cannot be converted into number.';
             }
@@ -28,4 +32,4 @@ let outerObject = (function(value){
     return obiekcik;
 })();
 
-console.log(outerObject)
+console.log(outerObject);
