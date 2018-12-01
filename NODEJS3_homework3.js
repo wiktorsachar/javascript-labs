@@ -5,6 +5,9 @@ problemie w konsoli.*/
 const fs = require('fs');
 
 fs.readFile('NODEJS3_homework1_output.json', (err, data) => {
-    if (err) throw err;
-    console.log(JSON.parse(data).lastname);
+    if (err) {
+      console.log('error:', err)
+    } else {
+      console.log(JSON.parse(data).lastname);
+    }
   });
