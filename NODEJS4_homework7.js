@@ -27,7 +27,6 @@ function getUser(id) {
                 resolve(JSON.parse(body));
             }
         })
-        
     })
 };
 
@@ -40,8 +39,7 @@ function getWeather(lat, lng) {
             } else {
                 resolve(JSON.parse(body));
             }
-        })
-        
+        }) 
     })
 };
 
