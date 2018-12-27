@@ -14,4 +14,4 @@ async function getUser(id) {
     }
 };
 
-console.log(getUser(4))
+console.log(getUser(4)) //wywala błąd
