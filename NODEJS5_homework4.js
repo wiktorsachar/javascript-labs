@@ -14,7 +14,7 @@ let y = Number(process.argv[3]);
 async function sum (x, y) {
     let sum = x + y;
     if (sum%2 == 0) {
-        throw new Error ('Niestety ten program dyskryminuje parzyste liczby i wyswietla tylko nieparzyste :(');
+        throw new Error ('Niestety - program ten dyskryminuje parzyste liczby i wyswietla tylko nieparzyste :(');
     } else {
         return sum;
     }
