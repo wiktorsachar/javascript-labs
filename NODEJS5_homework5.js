@@ -22,8 +22,12 @@ async function sum (x, y) {
     }
 };
 
-sum(x, y)
-.then((result) => console.log(result))
-.catch((error) => console.log(error.message));
-
-//nie zrobione
+(async function () {
+    try {
+        const result = await sum(x, y);
+        console.log(result);
+    } catch (error) {
+        console.log(error.message);
+    }
+    
+})();
