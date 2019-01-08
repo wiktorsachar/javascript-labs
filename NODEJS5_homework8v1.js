@@ -4,7 +4,6 @@ samej chwili wykorzystując Promise.all(). Wyświetlmy ich imiona w konsoli. (id
 
 const axios = require('axios');
 
-
 async function getUser(id) {
    try {
     const url = `https://jsonplaceholder.typicode.com/users/${id}/`;
